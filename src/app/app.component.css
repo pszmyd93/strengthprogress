@@ -1,0 +1,17 @@
+.topka {
+    background-color: #0c8000;
+    width: 100%;
+    position: fixed;
+    color: black;
+}
+.guzik-top {
+    border: solid, #333333;
+    font-size: 16px;
+    color: black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #0c8000;
+}
+.reszta {
+    margin-top: 10%; 
+}

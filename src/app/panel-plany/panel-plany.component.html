@@ -1,0 +1,13 @@
+<div class="container pudlo">
+
+  <div *ngIf="item; else noItem">
+      <p>Item is {{item.name}}</p>
+  </div>
+  <ng-template #noItem>
+      <p>Brak zapisanych planów :(</p>
+  </ng-template>
+
+  <button class="button guzik1">Stwórz</button>
+  <button class="button">Wyszukaj</button>
+
+</div>
