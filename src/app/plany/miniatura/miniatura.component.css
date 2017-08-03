@@ -1,0 +1,18 @@
+.pole-miniatury {
+    border: 1px solid whitesmoke;
+    background-color: #ccccff;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50%;
+    height: 80px;;
+    position: relative;
+}
+.dropdown {
+    position: absolute;
+    right: 16px;
+    top: 30%;
+}
+.tytul {
+    left: 20%;
+    position: absolute;
+}

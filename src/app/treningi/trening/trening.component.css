@@ -1,0 +1,10 @@
+nav {
+    border-radius: 0px;
+}
+h1 {
+    color: white;
+    padding-bottom: 10px;
+}
+.nav-elem {
+    border-bottom: 1px solid white;
+}
