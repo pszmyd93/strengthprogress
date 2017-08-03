@@ -10,6 +10,7 @@ import { PlanTreningowyComponent } from './plany/plan-treningowy/plan-treningowy
 import { SzablonCwiczeniaComponent } from './plany/szablon-cwiczenia/szablon-cwiczenia.component';
 import { CwiczenieComponent } from './treningi/cwiczenie/cwiczenie.component';
 import { TreningComponent } from './treningi/trening/trening.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TreningComponent } from './treningi/trening/trening.component';
     TreningComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

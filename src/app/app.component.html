@@ -5,20 +5,20 @@
   </h1>
   <div class="row">
     <div>
-      <a href="#"><button class="guzik-top guzik1 col-sm-4">Trening</button></a>
+      <button class="guzik-top guzik1 col-sm-4" routerLink="panel-trening">Trening</button>
     </div>
     <div>
-      <a href="#"><button class="guzik-top guzik2 col-sm-4">Moje plany</button></a>
+      <button class="guzik-top guzik2 col-sm-4" routerLink="panel-plany">Moje plany</button>
     </div>
     <div>
-      <a href="#"><button class="guzik-top guzik3 col-sm-4">Kalendarz</button></a>
+      <button class="guzik-top guzik3 col-sm-4" routerLink="kalendarz">Kalendarz</button>
     </div>
 
   </div>
 </div>
 
 <div class="reszta">
-  <app-trening></app-trening>
+  <router-outlet></router-outlet>
 </div>
 
 
