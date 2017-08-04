@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SzablonCwiczenia } from '../szablon-cwiczenia';
 
 @Component({
   selector: 'app-szablon-cwiczenia',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./szablon-cwiczenia.component.css']
 })
 export class SzablonCwiczeniaComponent implements OnInit {
+  @Input() szablonCwiczenia: SzablonCwiczenia;
 
   constructor() { }
 

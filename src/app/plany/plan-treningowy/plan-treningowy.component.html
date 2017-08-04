@@ -18,7 +18,7 @@
   <div class="container-fluid row">
 
     <div class="col-md-10 text-center">
-      <app-szablon-cwiczenia></app-szablon-cwiczenia>
+      <app-szablon-cwiczenia *ngFor="let szablonCwiczenia of szablonyCwiczen" [szablonCwiczenia]="szablonCwiczenia"></app-szablon-cwiczenia>
       <button>Dodaj ćwiczenie</button>
     </div>
 
