@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cwiczenie } from '../cwiczenie';
 
 @Component({
   selector: 'app-trening',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trening.component.css']
 })
 export class TreningComponent implements OnInit {
+  cwiczenia: Cwiczenie[] = [];
 
   constructor() { }
 
   ngOnInit() {
+    this.cwiczenia.push(new Cwiczenie('klata'));
+    this.cwiczenia.push(new Cwiczenie('biceps'));
   }
 
 }

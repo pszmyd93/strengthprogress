@@ -26,9 +26,7 @@
   <div class="container-fluid row">
 
     <div class="col-xs-10 text-center">
-      <app-cwiczenie></app-cwiczenie>
-      <app-cwiczenie></app-cwiczenie>
-      <app-cwiczenie></app-cwiczenie>
+      <app-cwiczenie *ngFor="let cwiczenie of cwiczenia; let i = index" [cwiczenie] = "cwiczenie" [nr] = "i"></app-cwiczenie>
       <button>Dodaj ćwiczenie</button>
     </div> 
 

@@ -1,10 +1,10 @@
-export class SzablonCwiczenia {
+import { Seria } from './seria';
+
+export class Cwiczenie {
     nazwaCwiczenia: string;
-    liczbaSerii: number;
-    liczbaPowtorzen: number;
-    dlugoscPrzerwy: number;
+    serie: Seria[] = [];
     
     constructor(nazwaCwiczenia: string) {
         this.nazwaCwiczenia = nazwaCwiczenia;
     }
-} 
+}
