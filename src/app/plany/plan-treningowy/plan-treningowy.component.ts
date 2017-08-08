@@ -7,7 +7,7 @@ import { SzablonCwiczenia } from '../szablon-cwiczenia';
   styleUrls: ['./plan-treningowy.component.css']
 })
 export class PlanTreningowyComponent implements OnInit {
-  szablonyCwiczen: SzablonCwiczenia[];
+  szablonyCwiczen: SzablonCwiczenia[] = [];
 
   constructor() { }
 
