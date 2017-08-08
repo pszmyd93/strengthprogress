@@ -8,7 +8,7 @@ import { SzablonCwiczenia } from '../szablon-cwiczenia';
 })
 export class SzablonCwiczeniaComponent implements OnInit {
   @Input() szablonCwiczenia: SzablonCwiczenia;
-
+  @Input() nr: number;
   constructor() { }
 
   ngOnInit() {

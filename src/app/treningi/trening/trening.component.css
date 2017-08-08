@@ -4,7 +4,17 @@ nav {
 h1 {
     color: white;
     padding-bottom: 10px;
+    font-size: 24px;
 }
 .nav-elem {
     border-bottom: 1px solid white;
+}
+.container-fluid-nav {
+    background-color: #33cc33;
+}
+.zapisz-btn { 
+    padding: 5px;
+}
+.czas {
+    margin-bottom: 10px;
 }

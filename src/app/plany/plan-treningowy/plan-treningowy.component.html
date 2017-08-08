@@ -1,13 +1,13 @@
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid row">
+  <div class="container-fluid-nav row">
 
-		<div class="text-left col-md-3">
+		<div class="text-left col-xs-3">
       <button type="button" class="btn btn-default navbar-btn" routerLink="/">Cofnij</button>
     </div>
-    <div class="text-center col-md-6 row">
-      <a href=""><div class="col-md-6"><h1>Trening A</h1></div></a>
+    <div class="text-center col-xs-6">
+      <a href=""><h1>Trening A</h1></a>
     </div>
-    <div class="text-right col-md-3">
+    <div class="text-right col-xs-3">
       <button type="button" class="btn btn-default navbar-btn">BUTTON2</button>
     </div>
     
@@ -17,25 +17,33 @@
 <div class="center">
   <div class="container-fluid row">
 
-    <div class="col-md-10 text-center">
-      <app-szablon-cwiczenia *ngFor="let szablonCwiczenia of szablonyCwiczen; let i = index"  [szablonCwiczenia]="szablonCwiczenia" [nr] = "i"></app-szablon-cwiczenia>
+    <div class="col-xs-10 text-center">
+      <app-szablon-cwiczenia *ngFor="let szablonCwiczenia of szablonyCwiczen; let i = index"  [szablonCwiczenia]="szablonCwiczenia" [nr] = i></app-szablon-cwiczenia>
       <button>Dodaj ćwiczenie</button>
     </div>
 
-    <div class="col-md-2">
-      <div><h1>Przycisk dropdown: czy przerwy > ile czasu przerwa, kolor do wyboru</h1></div>
-      <div><h1>Przycisk rozpocznij trening</h1></div>
+    <div class="col-xs-2">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Opcje
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#" routerLink="">Czy przerwy</a></li>
+          <li><a href="#" routerLink="">Czas</a></li>
+          <li><a href="#">Znacznik treningu (kolor)</a></li>
+        </ul>
+      </div>
+      <div class="start"><button class="btn btn-success">Start</button></div>
     </div>
 
   </div>
   <div class="container-fluid row">
 
-    <div class="col-md-10 text-center">
+    <div class="col-xs-10 text-center">
     
     </div>
 
-    <div class="col-md-2 ">
-      <h1>Zapisz trening</h1>
+    <div class="col-xs-2 ">
+      <div class=""><button class="btn btn-success">Zapisz trening</button></div>
     </div>
 
   </div>

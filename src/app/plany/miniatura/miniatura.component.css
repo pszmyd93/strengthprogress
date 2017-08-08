@@ -1,6 +1,6 @@
 .pole-miniatury {
     border: 1px solid whitesmoke;
-    background-color: #ccccff;
+    background-color: #33cc33;
     border-radius: 5px;
     padding: 5px;
     width: 50%;
@@ -15,4 +15,13 @@
 .tytul {
     left: 20%;
     position: absolute;
+}
+.element-drop {
+    clear: both;
+    color: #333;
+    display: block;
+    font-weight: 400;
+    line-height: 1.42857;
+    padding: 3px 20px;
+    white-space: nowrap;
 }
