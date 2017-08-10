@@ -10,7 +10,7 @@ import { SzablonCwiczeniaFormValues } from '../szablon-cwiczenia-form-values';
 export class SzablonCwiczeniaComponent {
   @Input() szablonCwiczenia: SzablonCwiczenia;
   @Input() nr: number;
-  @Input() initialLiczbaSerii: number = 1;
+  @Input() initialLiczbaSerii: number;
   constructor() { }
 
   onSubmit(formValues: SzablonCwiczeniaFormValues) {

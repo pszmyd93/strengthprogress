@@ -18,9 +18,7 @@
                   [ngModel]="initialLiczbaSerii"
                   type="number"
                   name="liczbaSerii"
-                  required
-                  pattern="[1-100]"/>
-                  <div class="error" *ngIf="liczbaSeriiInput.hasError('required')">musi być wypełnione</div>
+                  pattern="[0-9]{1,2}"/>
                   <div class="error" *ngIf="liczbaSeriiInput.hasError('pattern')">musi mieć wartość między 1 - 100</div>
               </div>
             </div>
