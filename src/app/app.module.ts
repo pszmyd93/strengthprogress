@@ -12,6 +12,8 @@ import { SzablonCwiczeniaComponent } from './plany/szablon-cwiczenia/szablon-cwi
 import { CwiczenieComponent } from './treningi/cwiczenie/cwiczenie.component';
 import { TreningComponent } from './treningi/trening/trening.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TimerComponent } from './treningi/timer/timer.component';
+import { DodajCwiczenieComponent } from './treningi/cwiczenie/dodaj-cwiczenie/dodaj-cwiczenie.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AppRoutingModule } from './app-routing.module';
     PlanTreningowyComponent,
     SzablonCwiczeniaComponent,
     CwiczenieComponent,
-    TreningComponent
+    TreningComponent,
+    TimerComponent,
+    DodajCwiczenieComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@
 
   <div class="row czas">
     
-      <div id="czas" class="col-xs-6">Czas</div>
+      <div id="czas" class="col-xs-6"><app-timer></app-timer></div>
       <div class="col-xs-6"><button class="btn btn-danger reset-btn">Reset</button></div>
 
   </div>
@@ -27,7 +27,7 @@
 
     <div class="col-xs-10 text-center">
       <app-cwiczenie *ngFor="let cwiczenie of cwiczenia; let i = index" [cwiczenie] = "cwiczenie" [nr] = "i"></app-cwiczenie>
-      <button>Dodaj ćwiczenie</button>
+      <app-dodaj-cwiczenie></app-dodaj-cwiczenie><button>Dodaj ćwiczenie</button>
     </div> 
 
     <div class="col-xs-2">
