@@ -9,23 +9,20 @@
       <div id="collapse{{nr}}" class="panel-collapse collapse">
         <ul class="list-group">
 
-          <li class="list-group-item">
-
-            <div class="row">
-              <label class="col-2">Liczba serii:</label>
-              <div class="col-10">
-                <input #liczbaSeriiInput="ngModel"
-                  [ngModel]="initialLiczbaSerii"
-                  type="number"
-                  name="liczbaSerii"
-                  pattern="[0-9]{1,2}"/>
-                  <div class="error" *ngIf="liczbaSeriiInput.hasError('pattern')">musi mieć wartość między 1 - 100</div>
-              </div>
-            </div>
+          <li class="list-group-item">Liczba serii
+              <input #liczbaSeriiInput="ngModel"
+              [ngModel]="initialLiczbaSerii"
+              type="number"
+              name="liczbaSerii"
+              pattern="[0-1000]"/>
           </li>
-
-          <li class="list-group-item">Ciężar</li>
-          <li class="list-group-item">Liczba powtórzeń</li>
+          <li class="list-group-item">Liczba powtórzeń
+              <input #liczbaPowtorzenInput="ngModel"
+              [ngModel]="initialLiczbaPowtorzen"
+              type="number"
+              name="liczbaPowtorzen"
+              pattern="[0-1000]"/>
+          </li>
           <li class="list-group-item"><button type="submit" [disabled]="form.invalid">Zapisz</button></li>
         </ul>
       </div>

@@ -27,7 +27,7 @@
 
     <div class="col-xs-10 text-center">
       <app-cwiczenie *ngFor="let cwiczenie of cwiczenia; let i = index" [cwiczenie] = "cwiczenie" [nr] = "i"></app-cwiczenie>
-      <app-dodaj-cwiczenie></app-dodaj-cwiczenie><button>Dodaj ćwiczenie</button>
+      <app-dodaj-cwiczenie></app-dodaj-cwiczenie>
     </div> 
 
     <div class="col-xs-2">
@@ -42,7 +42,7 @@
     </div>
 
     <div class="col-xs-2 ">
-      <button id="zapisz-btn" class="btn-success zapisz-btn">Zapisz trening</button>
+      <button id="zapisz-btn" (click)="zapiszTrening()" class="btn-success zapisz-btn">Zapisz trening</button>
     </div>
 
   </div>

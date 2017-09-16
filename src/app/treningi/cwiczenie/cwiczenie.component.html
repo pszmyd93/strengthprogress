@@ -19,17 +19,24 @@
 
           <li class="list-group-item">
             <div class="row">
-              <div class="col-xs-4">set: 1</div>
-              <div class="col-xs-4">weight: 100</div>
-              <div class="col-xs-4">reps: 3</div>
-            </div>
-          </li>
-
-          <li class="list-group-item">
-            <div class="row">
-              <div class="col-xs-4">set: 2</div>
-              <div class="col-xs-4">weight: 100</div>
-              <div class="col-xs-4">reps: 3</div>
+              <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" novalidate>
+                <div class="col-xs-3">set: 1</div>
+                <div class="col-xs-3">weight
+                      <input #ciezarInput="ngModel"
+                      [ngModel]="50"
+                      type="number"
+                      name="ciezar"
+                      pattern="[1-1000]"/>
+                </div>
+                <div class="col-xs-3">Reps
+                  <input #powtorzeniaInput="ngModel"
+                      [ngModel]="10"
+                      type="number"
+                      name="powtorzenia"
+                      pattern="[1-100]"/>
+                </div>
+                <div class="col-xs-3"><button type="submit">Zapisz</button></div>
+              </form>
             </div>
           </li>
 

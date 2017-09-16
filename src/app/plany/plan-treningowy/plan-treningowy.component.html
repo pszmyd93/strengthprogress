@@ -27,7 +27,12 @@
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Opcje
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <li><a href="#" routerLink="">Czy przerwy</a></li>
+          <li>Czy przerwy
+            <input type="radio" name="yesNoRadio" value="tak" [ngModel]="initialTakNie" required/>
+            Tak
+            <input type="radio" name="yesNooRadio" value="nie" [ngModel]="initialTakNie" required/>
+            Nie
+          </li>
           <li><a href="#" routerLink="">Czas</a></li>
           <li><a href="#">Znacznik treningu (kolor)</a></li>
         </ul>

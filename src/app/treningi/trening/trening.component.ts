@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Host} from '@angular/core';
 import { Cwiczenie } from '../cwiczenie';
 
 @Component({
@@ -15,5 +15,8 @@ export class TreningComponent implements OnInit {
     this.cwiczenia.push(new Cwiczenie('klata'));
     this.cwiczenia.push(new Cwiczenie('biceps'));
   }
-
+  zapiszTrening():void
+  {
+    alert(JSON.stringify(this.cwiczenia));
+  }
 }

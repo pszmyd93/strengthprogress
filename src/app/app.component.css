@@ -3,6 +3,7 @@
     width: 100%;
     position: fixed;
     color: black;
+    z-index: 1000;
 }
 .guzik-top {
     border: solid, #333333;
