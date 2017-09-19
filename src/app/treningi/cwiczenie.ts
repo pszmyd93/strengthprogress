@@ -7,4 +7,4 @@ export class Cwiczenie {
     constructor(nazwaCwiczenia: string) {
         this.nazwaCwiczenia = nazwaCwiczenia;
     }
-}
+} 

@@ -14,6 +14,7 @@ import { TreningComponent } from './treningi/trening/trening.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TimerComponent } from './treningi/timer/timer.component';
 import { DodajCwiczenieComponent } from './treningi/cwiczenie/dodaj-cwiczenie/dodaj-cwiczenie.component';
+import { SeriaComponent } from './treningi/cwiczenie/seria/seria.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DodajCwiczenieComponent } from './treningi/cwiczenie/dodaj-cwiczenie/do
     CwiczenieComponent,
     TreningComponent,
     TimerComponent,
-    DodajCwiczenieComponent
+    DodajCwiczenieComponent,
+    SeriaComponent
   ],
   imports: [
     BrowserModule,

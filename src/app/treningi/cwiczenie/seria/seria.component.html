@@ -1,0 +1,20 @@
+<div class="row">
+  
+    <div class="col-xs-3">set: {{nr}}</div>
+    <div class="col-xs-3">weight
+          <input #ciezarInput="ngModel"
+          [ngModel]="50"
+          type="number"
+          name="ciezar"
+          pattern="[1-1000]"/>
+    </div>
+    <div class="col-xs-3">Reps
+      <input #powtorzeniaInput="ngModel"
+          [ngModel]="10"
+          type="number"
+          name="powtorzenia"
+          pattern="[1-100]"/>
+    </div>
+    <div class="col-xs-3"><button>Usuń serię</button></div>
+  
+</div>

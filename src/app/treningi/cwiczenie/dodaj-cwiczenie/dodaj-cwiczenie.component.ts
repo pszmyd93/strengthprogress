@@ -28,4 +28,4 @@ export class DodajCwiczenieComponent {
     //this.domyslnaLiczbaSerii = 0;
   }  
 
-}
+} 

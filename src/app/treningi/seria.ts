@@ -7,4 +7,4 @@ export class Seria {
         this.powtorzenia = powtorzenia;
         this.ciezar = ciezar;
     }
-}
+} 

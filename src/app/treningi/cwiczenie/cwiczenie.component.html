@@ -18,35 +18,16 @@
         <ul class="list-group">
 
           <li class="list-group-item">
-            <div class="row">
-              <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" novalidate>
-                <div class="col-xs-3">set: 1</div>
-                <div class="col-xs-3">weight
-                      <input #ciezarInput="ngModel"
-                      [ngModel]="50"
-                      type="number"
-                      name="ciezar"
-                      pattern="[1-1000]"/>
-                </div>
-                <div class="col-xs-3">Reps
-                  <input #powtorzeniaInput="ngModel"
-                      [ngModel]="10"
-                      type="number"
-                      name="powtorzenia"
-                      pattern="[1-100]"/>
-                </div>
-                <div class="col-xs-3"><button type="submit">Zapisz</button></div>
-              </form>
-            </div>
+            <app-seria *ngFor="let seria of serie; let i = index" [seria] = "seria" [nr] = "i+1"></app-seria>
           </li>
 
         </ul>
 
         
         <div class="row collapse-bottom">
-              <div class="col-xs-6"><button>dodaj serię</button></div>
+              <div class="col-xs-6"><button (click)="dodajSerie()">Dodaj serię</button></div>
               
-              <div class="col-xs-6"><button>usun serię</button></div>
+              <div class="col-xs-6"></div>
         </div>
 
 

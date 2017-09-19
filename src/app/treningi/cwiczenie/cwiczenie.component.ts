@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Host } from '@angular/core';
 import { Cwiczenie } from '../cwiczenie';
 import { Seria } from '../seria';
 
@@ -7,14 +7,23 @@ import { Seria } from '../seria';
   templateUrl: './cwiczenie.component.html',
   styleUrls: ['./cwiczenie.component.css']
 })
-export class CwiczenieComponent {
+export class CwiczenieComponent implements OnInit {
   @Input() cwiczenie: Cwiczenie;
   @Input() nr: number;
+  serie: Seria[] = [];
+  
 
   constructor() { }
 
-  onSubmit(formValues: Seria) {
-    console.log(formValues);
+  ngOnInit() {
+    this.serie.push(new Seria(10,100));
+  }
+
+  dodajSerie(): void
+  {
+    
+    let s = new Seria(0,20);
+    this.serie.push(s);
   }
 
 }
