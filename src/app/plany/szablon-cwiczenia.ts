@@ -6,4 +6,4 @@ export class SzablonCwiczenia {
     constructor(nazwaCwiczenia: string) {
         this.nazwaCwiczenia = nazwaCwiczenia;
     }
-} 
+}

@@ -11,19 +11,18 @@
 
           <li class="list-group-item">Liczba serii
               <input #liczbaSeriiInput="ngModel"
-              [ngModel]="initialLiczbaSerii"
+              [(ngModel)]="initialLiczbaSerii"
               type="number"
               name="liczbaSerii"
               pattern="[0-1000]"/>
           </li>
           <li class="list-group-item">Liczba powtórzeń
               <input #liczbaPowtorzenInput="ngModel"
-              [ngModel]="initialLiczbaPowtorzen"
+              [(ngModel)]="initialLiczbaPowtorzen"
               type="number"
               name="liczbaPowtorzen"
               pattern="[0-1000]"/>
           </li>
-          <li class="list-group-item"><button type="submit" [disabled]="form.invalid">Zapisz</button></li>
         </ul>
       </div>
     </div>

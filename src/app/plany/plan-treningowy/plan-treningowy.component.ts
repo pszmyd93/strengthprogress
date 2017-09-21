@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SzablonCwiczenia } from '../szablon-cwiczenia';
+import { kolory } from './kolory';
+
 
 @Component({
   selector: 'app-plan-treningowy',
@@ -8,6 +10,8 @@ import { SzablonCwiczenia } from '../szablon-cwiczenia';
 })
 export class PlanTreningowyComponent implements OnInit {
   szablonyCwiczen: SzablonCwiczenia[] = [];
+  domyslnaNazwaCwiczenia = "klata";
+  dostepneKolory = kolory;
 
   constructor() { }
 
@@ -15,5 +19,8 @@ export class PlanTreningowyComponent implements OnInit {
     this.szablonyCwiczen.push(new SzablonCwiczenia('klata'));
     this.szablonyCwiczen.push(new SzablonCwiczenia('podciąganie'));
   }
-
+  onSubmit(formValues: SzablonCwiczenia){
+    let c = new SzablonCwiczenia(formValues.nazwaCwiczenia);
+    this.szablonyCwiczen.push(c);
+  }
 }

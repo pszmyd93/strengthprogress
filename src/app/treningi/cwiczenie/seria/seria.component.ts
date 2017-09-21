@@ -10,10 +10,10 @@ import { Cwiczenie } from '../../cwiczenie';
 export class SeriaComponent implements OnInit {
   @Input() seria: Seria;
   @Input() nr: number;
-
+  
   constructor() { }
 
   ngOnInit() {
   }
 
-}
+} 

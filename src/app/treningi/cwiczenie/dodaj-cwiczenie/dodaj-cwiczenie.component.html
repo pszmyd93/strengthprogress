@@ -11,18 +11,7 @@
     <div class="error" *ngIf="nazwaCwiczeniaInput.hasError('required')">Musi być wypełnione</div>
   </div>
 </div>
-<div class="row">
-  <label class="col-xs-4">Liczba serii</label>
-  <div class="col-xs-8">
-    <input #liczbaSeriiInput="ngModel"
-        [(ngModel)]="domyslnaliczbaSerii"
-        type="number"
-        name="liczbaSerii"
-        pattern="[1-30]"
-    />
-    <div class="error" *ngIf="liczbaSeriiInput.hasError('pattern')">Liczba 0-30</div>
-  </div>
-</div>
+
 <div class="row">
   <div class="col-xs-4"></div>
   <div class="col-xs-8">

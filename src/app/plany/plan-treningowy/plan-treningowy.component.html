@@ -19,22 +19,35 @@
 
     <div class="col-xs-10 text-center">
       <app-szablon-cwiczenia *ngFor="let szablonCwiczenia of szablonyCwiczen; let i = index"  [szablonCwiczenia]="szablonCwiczenia" [nr] = i></app-szablon-cwiczenia>
-      <button>Dodaj ćwiczenie</button>
+      <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" novalidate>
+          <input #nazwaCwiczeniaInput="ngModel"
+          [(ngModel)]="domyslnaNazwaCwiczenia"
+          type="string"
+          name="nazwaCwiczenia"
+      />
+        <button type="submit">Dodaj ćwiczenie</button>
+      </form> 
     </div>
 
     <div class="col-xs-2">
       <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Opcje
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Znacznik treningu
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <li>Czy przerwy
-            <input type="radio" name="yesNoRadio" value="tak" [ngModel]="initialTakNie" required/>
-            Tak
-            <input type="radio" name="yesNooRadio" value="nie" [ngModel]="initialTakNie" required/>
-            Nie
+          
+          <li>
+            <input type="radio" name="kolorRadio" value="dostepneKolory.niebieski" required/>
+            Niebieski
           </li>
-          <li><a href="#" routerLink="">Czas</a></li>
-          <li><a href="#">Znacznik treningu (kolor)</a></li>
+          <li>
+            <input type="radio" name="kolorRadio" value="dostepneKolory.żółty" required/>
+            Żółty
+          </li>
+          <li>
+            <input type="radio" name="kolorRadio" value="dostepneKolory.czerwony" required/>
+            Czerwony
+          </li>
+        
         </ul>
       </div>
       <div class="start"><button class="btn btn-success">Start</button></div>
