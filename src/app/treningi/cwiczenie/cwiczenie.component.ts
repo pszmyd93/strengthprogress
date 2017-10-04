@@ -10,20 +10,20 @@ import { Seria } from '../seria';
 export class CwiczenieComponent implements OnInit {
   @Input() cwiczenie: Cwiczenie;
   @Input() nr: number;
-  serie: Seria[] = [];
+ 
   
 
   constructor() { }
 
   ngOnInit() {
-    this.serie.push(new Seria(10,100));
+    this.cwiczenie.serie.push(new Seria(10,100));
   }
 
   dodajSerie(): void
   {
     
     let s = new Seria(0,20);
-    this.serie.push(s);
+    this.cwiczenie.serie.push(s);
   }
 
 }

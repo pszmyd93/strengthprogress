@@ -11,14 +11,14 @@
 
           <li class="list-group-item">Liczba serii
               <input #liczbaSeriiInput="ngModel"
-              [(ngModel)]="initialLiczbaSerii"
+              [(ngModel)]="szablonCwiczenia.liczbaSerii"
               type="number"
               name="liczbaSerii"
               pattern="[0-1000]"/>
           </li>
           <li class="list-group-item">Liczba powtórzeń
               <input #liczbaPowtorzenInput="ngModel"
-              [(ngModel)]="initialLiczbaPowtorzen"
+              [(ngModel)]="szablonCwiczenia.liczbaPowtorzen"
               type="number"
               name="liczbaPowtorzen"
               pattern="[0-1000]"/>

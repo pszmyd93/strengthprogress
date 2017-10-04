@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SzablonCwiczenia } from '../szablon-cwiczenia';
-import { kolory } from './kolory';
+
+import { PlanTreningowyValues } from '../plan-treningowy-values';
 
 
 @Component({
@@ -9,18 +10,20 @@ import { kolory } from './kolory';
   styleUrls: ['./plan-treningowy.component.css']
 })
 export class PlanTreningowyComponent implements OnInit {
-  szablonyCwiczen: SzablonCwiczenia[] = [];
+  @Input() planTreningowy: PlanTreningowyValues;
+
+  
   domyslnaNazwaCwiczenia = "klata";
-  dostepneKolory = kolory;
+  
 
   constructor() { }
 
   ngOnInit() {
-    this.szablonyCwiczen.push(new SzablonCwiczenia('klata'));
-    this.szablonyCwiczen.push(new SzablonCwiczenia('podciąganie'));
+    this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('klata'));
+    this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('podciąganie'));
   }
   onSubmit(formValues: SzablonCwiczenia){
     let c = new SzablonCwiczenia(formValues.nazwaCwiczenia);
-    this.szablonyCwiczen.push(c);
+    this.planTreningowy.szablonyCwiczen.push(c);
   }
 }

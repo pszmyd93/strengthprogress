@@ -1,0 +1,24 @@
+{
+    "planyTreningowe": [
+        {
+            "id": 1,
+            "nazwaPlanu": "Trening A",
+            "szablonyCwiczen": [
+                {
+                    "nazwaCwiczenia": "klata",
+                    "liczbaSerii": 3,
+                    "liczbaPowtorzen": 8
+                },
+                {
+                    "nazwaCwiczenia": "bicek",
+                    "liczbaSerii": 3,
+                    "liczbaPowtorzen": 12
+                }
+            ]
+
+        },
+        {
+
+        }
+    ]
+}

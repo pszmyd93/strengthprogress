@@ -18,7 +18,7 @@
   <div class="container-fluid row">
 
     <div class="col-xs-10 text-center">
-      <app-szablon-cwiczenia *ngFor="let szablonCwiczenia of szablonyCwiczen; let i = index"  [szablonCwiczenia]="szablonCwiczenia" [nr] = i></app-szablon-cwiczenia>
+      <app-szablon-cwiczenia *ngFor="let szablonCwiczenia of planTreningowy.szablonyCwiczen; let i = index"  [szablonCwiczenia]="szablonCwiczenia" [nr] = "i"></app-szablon-cwiczenia>
       <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" novalidate>
           <input #nazwaCwiczeniaInput="ngModel"
           [(ngModel)]="domyslnaNazwaCwiczenia"
