@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SzablonCwiczenia } from '../szablon-cwiczenia';
+import { SzablonCwiczeniaFormValues } from '../szablon-cwiczenia-form-values';
 
 import { PlanTreningowyValues } from '../plan-treningowy-values';
 
@@ -10,7 +11,7 @@ import { PlanTreningowyValues } from '../plan-treningowy-values';
   styleUrls: ['./plan-treningowy.component.css']
 })
 export class PlanTreningowyComponent implements OnInit {
-  @Input() planTreningowy: PlanTreningowyValues;
+  planTreningowy: PlanTreningowyValues = new PlanTreningowyValues("nazwa");
 
   
   domyslnaNazwaCwiczenia = "klata";
@@ -26,4 +27,4 @@ export class PlanTreningowyComponent implements OnInit {
     let c = new SzablonCwiczenia(formValues.nazwaCwiczenia);
     this.planTreningowy.szablonyCwiczen.push(c);
   }
-}
+} 

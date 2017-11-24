@@ -19,4 +19,4 @@ export class TreningComponent implements OnInit {
   {
     alert(JSON.stringify(this.cwiczenia));
   }
-}
+} 
