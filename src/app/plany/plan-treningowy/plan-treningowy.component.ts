@@ -27,4 +27,9 @@ export class PlanTreningowyComponent implements OnInit {
     let c = new SzablonCwiczenia(formValues.nazwaCwiczenia);
     this.planTreningowy.szablonyCwiczen.push(c);
   }
-} 
+  zapisz(): void {
+    let obj = JSON.stringify(this.planTreningowy);//stringify values 
+    localStorage.setItem("plan1",obj);
+    alert(localStorage.getItem("plan1"));//wyświetlić 
+  }
+}
