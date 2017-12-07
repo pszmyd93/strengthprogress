@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Host } from '@angular/core';
-//musi importować dane planu żeby pobierać nazwę
 import { PlanTreningowyValues } from '../plan-treningowy-values';
+
 
 
 @Component({

@@ -4,6 +4,8 @@ import { SzablonCwiczeniaFormValues } from '../szablon-cwiczenia-form-values';
 
 import { PlanTreningowyValues } from '../plan-treningowy-values';
 
+//import miniatury żeby móc dostać nazwę
+
 
 @Component({
   selector: 'app-plan-treningowy',
@@ -11,17 +13,21 @@ import { PlanTreningowyValues } from '../plan-treningowy-values';
   styleUrls: ['./plan-treningowy.component.css']
 })
 export class PlanTreningowyComponent implements OnInit {
+  //zrobic ifa plan z jsona albo plan nowy?
+  miniaturaKliknieta: string;
+
   planTreningowy: PlanTreningowyValues = new PlanTreningowyValues("nazwa");
 
-  
   domyslnaNazwaCwiczenia = "klata";
   
 
   constructor() { }
+  
 
   ngOnInit() {
     this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('klata'));
     this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('podciąganie'));
+    alert(this.miniaturaKliknieta);
   }
   onSubmit(formValues: SzablonCwiczenia){
     let c = new SzablonCwiczenia(formValues.nazwaCwiczenia);
@@ -29,7 +35,8 @@ export class PlanTreningowyComponent implements OnInit {
   }
   zapisz(): void {
     let obj = JSON.stringify(this.planTreningowy);//stringify values 
-    localStorage.setItem("plan1",obj);
-    alert(localStorage.getItem("plan1"));//wyświetlić 
+    localStorage.setItem("this.planTreningowy.nazwaPlanu",obj);
+    alert(localStorage.getItem("this.planTreningowy.nazwaPlanu"));//wyświetlić 
+     //dodać do listy
   }
 }
