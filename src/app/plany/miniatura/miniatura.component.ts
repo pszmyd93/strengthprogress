@@ -2,7 +2,6 @@ import { Component, OnInit, Input, Host } from '@angular/core';
 import { PlanTreningowyValues } from '../plan-treningowy-values';
 
 
-
 @Component({
   selector: 'app-miniatura',
   templateUrl: './miniatura.component.html',
@@ -11,11 +10,11 @@ import { PlanTreningowyValues } from '../plan-treningowy-values';
 export class MiniaturaComponent implements OnInit {
   @Input() planTreningowy: PlanTreningowyValues; //do pobierania nazwy z listy obiektow-planow
   @Input() nr: number;
-
+  
   constructor() { }
 
   ngOnInit() {
-
+    
   }
 
-}
+} 

@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TimerComponent } from './treningi/timer/timer.component';
 import { DodajCwiczenieComponent } from './treningi/cwiczenie/dodaj-cwiczenie/dodaj-cwiczenie.component';
 import { SeriaComponent } from './treningi/cwiczenie/seria/seria.component';
+import { PlanTreningowyService } from './plany/plan-treningowy.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { SeriaComponent } from './treningi/cwiczenie/seria/seria.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PlanTreningowyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

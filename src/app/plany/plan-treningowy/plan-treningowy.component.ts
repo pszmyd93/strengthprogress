@@ -1,10 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Host } from '@angular/core';
 import { SzablonCwiczenia } from '../szablon-cwiczenia';
 import { SzablonCwiczeniaFormValues } from '../szablon-cwiczenia-form-values';
-
 import { PlanTreningowyValues } from '../plan-treningowy-values';
+import { PlanTreningowyService } from '../plan-treningowy.service';
 
-//import miniatury żeby móc dostać nazwę
+
 
 
 @Component({
@@ -14,20 +14,19 @@ import { PlanTreningowyValues } from '../plan-treningowy-values';
 })
 export class PlanTreningowyComponent implements OnInit {
   //zrobic ifa plan z jsona albo plan nowy?
-  miniaturaKliknieta: string;
 
   planTreningowy: PlanTreningowyValues = new PlanTreningowyValues("nazwa");
 
   domyslnaNazwaCwiczenia = "klata";
   
 
-  constructor() { }
+  constructor(private planTreningowyService: PlanTreningowyService) { }
   
 
   ngOnInit() {
     this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('klata'));
     this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('podciąganie'));
-    alert(this.miniaturaKliknieta);
+    
   }
   onSubmit(formValues: SzablonCwiczenia){
     let c = new SzablonCwiczenia(formValues.nazwaCwiczenia);
@@ -39,4 +38,4 @@ export class PlanTreningowyComponent implements OnInit {
     alert(localStorage.getItem("this.planTreningowy.nazwaPlanu"));//wyświetlić 
      //dodać do listy
   }
-}
+} 
