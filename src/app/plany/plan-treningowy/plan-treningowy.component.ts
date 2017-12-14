@@ -3,6 +3,7 @@ import { SzablonCwiczenia } from '../szablon-cwiczenia';
 import { SzablonCwiczeniaFormValues } from '../szablon-cwiczenia-form-values';
 import { PlanTreningowyValues } from '../plan-treningowy-values';
 import { PlanTreningowyService } from '../plan-treningowy.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -20,13 +21,23 @@ export class PlanTreningowyComponent implements OnInit {
   domyslnaNazwaCwiczenia = "klata";
   
 
-  constructor(private planTreningowyService: PlanTreningowyService) { }
+  constructor(private activatedRoute: ActivatedRoute) {
+
+  }
+  private onParamsChanged(params) { 
+    if(params.id) {
+      this.planTreningowy.nazwaPlanu = params.id;
+    }
+  }
+
   
 
   ngOnInit() {
+    this.activatedRoute.params
+      .subscribe(this.onParamsChanged.bind(this));
+
     this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('klata'));
     this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('podciąganie'));
-    
   }
   onSubmit(formValues: SzablonCwiczenia){
     let c = new SzablonCwiczenia(formValues.nazwaCwiczenia);

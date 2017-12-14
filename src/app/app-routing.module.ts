@@ -11,6 +11,7 @@ const routes: Routes = [
     {path: 'panel-trening/treningi/trening', component: TreningComponent},
     {path: 'panel-plany/treningi/trening', component: TreningComponent},
     {path: 'panel-plany/plany/plan-treningowy', component: PlanTreningowyComponent},
+    {path: 'panel-plany/plany/plan-treningowy/:id/edit', component: PlanTreningowyComponent},
     {path: 'panel-plany', component: PanelPlanyComponent},
     {path: 'panel-trening/panel-plany', redirectTo: 'panel-plany', pathMatch: 'full'},
     {path: 'kalendarz', component: KalendarzComponent},
