@@ -9,7 +9,7 @@
     <ul class="dropdown-menu">
       <li><a href="#" routerLink="treningi/trening">Rozpocznij</a></li>
       <li><a href="#" [routerLink]="['plany/plan-treningowy',planTreningowy.nazwaPlanu,'edit']">Edytuj</a></li>
-      <li><a href="#">Usuń</a></li>
+      <li><button (click)="usun(planTreningowy.nazwaPlanu)">Usuń</button></li>
     </ul>
   </div>
 
