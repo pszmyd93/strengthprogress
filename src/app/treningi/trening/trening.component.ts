@@ -1,5 +1,7 @@
-import { Component, OnInit ,Host} from '@angular/core';
+import { Component, OnInit ,Host, Input} from '@angular/core';
 import { Cwiczenie } from '../cwiczenie';
+import { Trening } from '../trening';
+import { PlanTreningowyValues } from '../../plany/plan-treningowy-values';
 
 @Component({
   selector: 'app-trening',
@@ -7,19 +9,21 @@ import { Cwiczenie } from '../cwiczenie';
   styleUrls: ['./trening.component.css']
 })
 export class TreningComponent implements OnInit {
-  cwiczenia: Cwiczenie[] = [];
+  @Input() nazwa = "plan";
+  trening: Trening = new Trening(this.nazwa);
+  plan: PlanTreningowyValues = new PlanTreningowyValues("plan");
 
   constructor() { }
 
   ngOnInit() {
-    this.cwiczenia.push(new Cwiczenie('klata'));
-    this.cwiczenia.push(new Cwiczenie('biceps'));
+    this.trening.cwiczenia.push(new Cwiczenie('klata'));
+    this.trening.cwiczenia.push(new Cwiczenie('biceps'));
   }
   zapiszTrening():void
   {
-    alert(JSON.stringify(this.cwiczenia));
+    alert(JSON.stringify(this.trening.cwiczenia));
   }
   usunCwiczenie(nr: number) {
-    this.cwiczenia.splice(nr, 1);
+    this.trening.cwiczenia.splice(nr, 1);
   }
 } 

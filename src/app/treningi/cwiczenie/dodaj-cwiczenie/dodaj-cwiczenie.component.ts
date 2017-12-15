@@ -22,7 +22,7 @@ export class DodajCwiczenieComponent {
   onSubmit(formValues: CwiczenieWartosci) {
     console.log(formValues);
     let c = new Cwiczenie(formValues.nazwaCwiczenia);
-    this.parent.cwiczenia.push(c);
+    this.parent.trening.cwiczenia.push(c);
     alert(this.domyslnaNazwaCwiczenia);
   }
 
