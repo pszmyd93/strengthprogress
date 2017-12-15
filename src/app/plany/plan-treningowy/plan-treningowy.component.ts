@@ -15,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PlanTreningowyComponent implements OnInit {
   //zrobic ifa plan z jsona albo plan nowy?
-
+  plany: PlanTreningowyValues[] = [];
   planTreningowy: PlanTreningowyValues = new PlanTreningowyValues("nazwa");
 
   domyslnaNazwaCwiczenia = "klata";
@@ -27,6 +27,14 @@ export class PlanTreningowyComponent implements OnInit {
   private onParamsChanged(params) { 
     if(params.id) {
       this.planTreningowy.nazwaPlanu = params.id;
+      let plany = JSON.parse(localStorage.getItem("listaPlanow"));
+      for(let i = 0; i < plany.length; i++) { 
+        let plan = plany[i]
+        if(plan.nazwaPlanu == params.id) {
+          this.planTreningowy = plan;
+        }
+      }
+
     }
   }
 
@@ -36,8 +44,6 @@ export class PlanTreningowyComponent implements OnInit {
     this.activatedRoute.params
       .subscribe(this.onParamsChanged.bind(this));
 
-    this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('klata'));
-    this.planTreningowy.szablonyCwiczen.push(new SzablonCwiczenia('podciąganie'));
   }
   onSubmit(formValues: SzablonCwiczenia){
     let c = new SzablonCwiczenia(formValues.nazwaCwiczenia);
@@ -45,8 +51,39 @@ export class PlanTreningowyComponent implements OnInit {
   }
   zapisz(): void {
     let obj = JSON.stringify(this.planTreningowy);//stringify values 
-    localStorage.setItem("this.planTreningowy.nazwaPlanu",obj);
-    alert(localStorage.getItem("this.planTreningowy.nazwaPlanu"));//wyświetlić 
+    localStorage.setItem(this.planTreningowy.nazwaPlanu,obj);
+    alert(localStorage.getItem(this.planTreningowy.nazwaPlanu));//wyświetlić 
      //dodać do listy
+
+    let obj2 = JSON.parse(localStorage.getItem("listaPlanow"));
+    if(obj2) {
+      this.plany = obj2;
+      let numer = 0;
+      //wyszukaj plan
+      for(let i = 0; i < obj2.length; i++) {
+        let planBiezacy = obj2[i];
+        
+        if(planBiezacy.nazwaPlanu == this.planTreningowy.nazwaPlanu) {
+          numer = i;
+        }
+      }
+      if(numer !== 0) {
+        obj2[numer] = this.planTreningowy;
+        this.plany = obj2;
+        alert(JSON.stringify(this.plany));
+        localStorage.setItem("listaPlanow",JSON.stringify(this.plany));
+      }
+      else {
+        let nowy = new PlanTreningowyValues(this.planTreningowy.nazwaPlanu);
+        nowy = this.planTreningowy;
+        this.plany.push(nowy);
+        alert(JSON.stringify(this.plany));
+        localStorage.setItem("listaPlanow",JSON.stringify(this.plany));
+      }
+    }
+    else {
+      //dodac plan do listy
+      localStorage.setItem("listaPlanow",JSON.stringify(this.plany));
+    }
   }
-} 
+}
