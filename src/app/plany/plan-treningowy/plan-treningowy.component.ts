@@ -86,4 +86,9 @@ export class PlanTreningowyComponent implements OnInit {
       localStorage.setItem("listaPlanow",JSON.stringify(this.plany));
     }
   }
+
+  usun(nr: number): void {
+    alert(nr);
+    this.planTreningowy.szablonyCwiczen.splice(nr,1);
+  }
 }
