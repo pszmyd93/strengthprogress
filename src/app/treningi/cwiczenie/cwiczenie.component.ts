@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Host } from '@angular/core';
+import { Component, OnInit, Input, Host, Output, EventEmitter } from '@angular/core';
 import { Cwiczenie } from '../cwiczenie';
 import { Seria } from '../seria';
 
@@ -10,6 +10,7 @@ import { Seria } from '../seria';
 export class CwiczenieComponent implements OnInit {
   @Input() cwiczenie: Cwiczenie;
   @Input() nr: number;
+  @Output() onUsunCwiczenie = new EventEmitter();
  
   
 
@@ -21,9 +22,15 @@ export class CwiczenieComponent implements OnInit {
 
   dodajSerie(): void
   {
-    
     let s = new Seria(0,20);
     this.cwiczenie.serie.push(s);
   }
+  usunSerie(nr: number){
+    alert(nr);
+    this.cwiczenie.serie.splice(nr-1,1);
+  }
 
+  usunCwiczenie(){
+    this.onUsunCwiczenie.emit(this.nr);
+  }
 }

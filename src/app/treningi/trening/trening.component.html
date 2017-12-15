@@ -26,7 +26,7 @@
   <div class="container-fluid row">
 
     <div class="col-xs-10 text-center">
-      <app-cwiczenie *ngFor="let cwiczenie of cwiczenia; let i = index" [cwiczenie] = "cwiczenie" [nr] = "i"></app-cwiczenie><!--[] to input od rodzica do dziecka-->
+      <app-cwiczenie *ngFor="let cwiczenie of cwiczenia; let i = index" [cwiczenie] = "cwiczenie" [nr] = "i" (onUsunCwiczenie)="usunCwiczenie($event)"></app-cwiczenie><!--[] to input od rodzica do dziecka-->
       <app-dodaj-cwiczenie></app-dodaj-cwiczenie>
     </div> 
 

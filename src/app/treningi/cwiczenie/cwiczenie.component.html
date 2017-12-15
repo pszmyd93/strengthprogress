@@ -18,7 +18,7 @@
         <ul class="list-group">
 
           <li class="list-group-item">
-            <app-seria *ngFor="let seria of cwiczenie.serie; let i = index" [seria] = "seria" [nr] = "i+1"></app-seria>
+            <app-seria *ngFor="let seria of cwiczenie.serie; let i = index" [seria] = "seria" [nr] = "i+1" (onUsunSerie)="usunSerie($event)"></app-seria>
           </li>
 
         </ul>
@@ -27,7 +27,7 @@
         <div class="row collapse-bottom">
               <div class="col-xs-6"><button (click)="dodajSerie()">Dodaj serię</button></div>
               
-              <div class="col-xs-6"></div>
+              <div class="col-xs-6"><button (click)="usunCwiczenie()">Usuń ćwiczenie</button></div>
         </div>
 
 

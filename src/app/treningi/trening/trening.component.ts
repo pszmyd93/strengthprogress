@@ -19,4 +19,7 @@ export class TreningComponent implements OnInit {
   {
     alert(JSON.stringify(this.cwiczenia));
   }
+  usunCwiczenie(nr: number) {
+    this.cwiczenia.splice(nr, 1);
+  }
 } 

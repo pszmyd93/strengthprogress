@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Seria } from '../../seria';
 import { Cwiczenie } from '../../cwiczenie';
 
@@ -10,10 +10,15 @@ import { Cwiczenie } from '../../cwiczenie';
 export class SeriaComponent implements OnInit {
   @Input() seria: Seria;
   @Input() nr: number;
+  @Output() onUsunSerie = new EventEmitter();
   
   constructor() { }
 
   ngOnInit() {
+  }
+
+  usunSerie() {
+    this.onUsunSerie.emit(this.nr);
   }
 
 } 
