@@ -7,10 +7,10 @@
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Opcje
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><a href="#" routerLink="treningi/trening">Rozpocznij</a></li>
+      <li><a href="#" [routerLink]="['treningi/trening',planTreningowy.nazwaPlanu,'nowy']">Rozpocznij</a></li>
       <li><a href="#" [routerLink]="['plany/plan-treningowy',planTreningowy.nazwaPlanu,'edit']">Edytuj</a></li>
       <li><button (click)="usun(planTreningowy.nazwaPlanu)">Usuń</button></li>
     </ul>
   </div>
 
-</div>
+</div> 

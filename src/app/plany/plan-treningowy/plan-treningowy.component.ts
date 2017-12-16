@@ -14,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./plan-treningowy.component.css']
 })
 export class PlanTreningowyComponent implements OnInit {
-  //zrobic ifa plan z jsona albo plan nowy?
+  
   plany: PlanTreningowyValues[] = [];
   planTreningowy: PlanTreningowyValues = new PlanTreningowyValues("nazwa");
 
@@ -24,7 +24,7 @@ export class PlanTreningowyComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {
 
   }
-  private onParamsChanged(params) { 
+  private onParamsChanged(params) {
     if(params.id) {
       this.planTreningowy.nazwaPlanu = params.id;
       let plany = JSON.parse(localStorage.getItem("listaPlanow"));

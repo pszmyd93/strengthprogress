@@ -17,6 +17,15 @@ import { DodajCwiczenieComponent } from './treningi/cwiczenie/dodaj-cwiczenie/do
 import { SeriaComponent } from './treningi/cwiczenie/seria/seria.component';
 import { PlanTreningowyService } from './plany/plan-treningowy.service';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+
+import * as jQuery from 'jquery';
+import { AutoCompleteModule, ScheduleModule, DialogModule, CalendarModule, DropdownModule } from 'primeng/primeng';
+(window as any).jQuery = (window as any).$ = jQuery; // This is needed to resolve issue.
+
+import {MenuItem} from 'primeng/primeng';            //api
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,11 +40,14 @@ import { PlanTreningowyService } from './plany/plan-treningowy.service';
     TimerComponent,
     DodajCwiczenieComponent,
     SeriaComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ScheduleModule,
+    AngularFontAwesomeModule
   ],
   providers: [PlanTreningowyService],
   bootstrap: [AppComponent]

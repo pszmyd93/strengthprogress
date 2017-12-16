@@ -10,6 +10,7 @@ const routes: Routes = [
     {path: 'panel-trening', component: PanelTreningComponent},
     {path: 'panel-trening/treningi/trening', component: TreningComponent},
     {path: 'panel-plany/treningi/trening', component: TreningComponent},
+    {path: 'panel-plany/treningi/trening/:nazwa/nowy', component: TreningComponent},
     {path: 'panel-plany/plany/plan-treningowy', component: PlanTreningowyComponent},
     {path: 'panel-plany/plany/plan-treningowy/:id/edit', component: PlanTreningowyComponent},
     {path: 'panel-plany', component: PanelPlanyComponent},
@@ -19,9 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [
     RouterModule
   ]
