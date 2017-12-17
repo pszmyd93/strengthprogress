@@ -17,7 +17,7 @@ export class CwiczenieComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.cwiczenie.serie.push(new Seria(10,100));
+    
   }
 
   dodajSerie(): void
