@@ -35,7 +35,7 @@ export class PlanTreningowyComponent implements OnInit {
         }
       }
 
-    }
+    } 
   }
 
   
@@ -83,6 +83,7 @@ export class PlanTreningowyComponent implements OnInit {
     }
     else {
       //dodac plan do listy
+      this.plany.push(this.planTreningowy);
       localStorage.setItem("listaPlanow",JSON.stringify(this.plany));
     }
   }

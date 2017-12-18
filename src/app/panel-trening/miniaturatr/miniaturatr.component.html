@@ -1,0 +1,15 @@
+<div class="container pole-miniatury">
+  
+    
+    <div class="tytul"><h2>{{trening.nazwa}} {{nr}}</h2></div> <!-- ma pobierać nazwę z ćwiczenia -->
+  
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Opcje
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#" [routerLink]="['treningi/trening',trening.id,'edit']">Edytuj</a></li>
+        <li><button (click)="usun(trening.id)">Usuń</button></li>
+      </ul>
+    </div>
+  
+  </div> 

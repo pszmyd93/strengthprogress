@@ -11,23 +11,11 @@ import { PlanTreningowyService } from '../plany/plan-treningowy.service';
 })
 export class PanelPlanyComponent implements OnInit {
   listaPlanow: PlanTreningowyValues[] = JSON.parse(localStorage.getItem("listaPlanow"));
-  listaPlanowStorage: PlanTreningowyValues[] = [];
+  
 
   constructor() { }
 
   ngOnInit() {
-    
-    //dodawanie planów do listy z localstorage 
-    let pierwszy = new PlanTreningowyValues("pierwszy");
-    let drugi = new PlanTreningowyValues("drugi");
-    //this.listaPlanowStorage.push(pierwszy);
-    //this.listaPlanowStorage.push(drugi);
-    
-    //localStorage.setItem("listaPlanow",list);
-    //let str = localStorage.getItem("listaPlanow"); //albo listaPlanow = localstorage.getItem(listaPlanow);
-    //this.listaPlanow = JSON.parse(str);  
-    //cos zrobic zeby uzyskac liste nazw?
-    //this.listaPlanow = JSON.parse(localStorage.getItem("listaPlanow"));
     
   }
   

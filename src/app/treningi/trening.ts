@@ -1,11 +1,12 @@
 import { Cwiczenie } from './cwiczenie';
 
 export class Trening {
-    id: string;
-    data: Date;
+    id: number;
+    nazwa: string;
+    data: string;
     cwiczenia: Cwiczenie[] = [];
 
-    constructor(id: string){
+    constructor(id: number){
         this.id = id;
     }
 }

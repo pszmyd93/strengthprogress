@@ -6,9 +6,12 @@ import { KalendarzComponent } from './kalendarz/kalendarz.component';
 import { TreningComponent } from './treningi/trening/trening.component';
 import { PlanTreningowyComponent } from './plany/plan-treningowy/plan-treningowy.component';
 
+
 const routes: Routes = [
     {path: 'panel-trening', component: PanelTreningComponent},
     {path: 'panel-trening/treningi/trening', component: TreningComponent},
+    {path: 'panel-trening/treningi/trening/:id/edit', component: TreningComponent},
+    {path: 'kalendarz/panel-trening/treningi/trening/:id/edit', component: TreningComponent},
     {path: 'panel-plany/treningi/trening', component: TreningComponent},
     {path: 'panel-plany/treningi/trening/:nazwa/nowy', component: TreningComponent},
     {path: 'panel-plany/plany/plan-treningowy', component: PlanTreningowyComponent},
@@ -25,4 +28,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {} 
