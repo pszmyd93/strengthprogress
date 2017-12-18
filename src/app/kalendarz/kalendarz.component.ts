@@ -28,9 +28,9 @@ export class KalendarzComponent implements OnInit {
     }
   events: any[];
   handleEventClick(e) {
-    alert(JSON.stringify(e));
-    let link = ['kalendarz/panel-trening/treningi/trening',e.id,'edit'];
-    this.router.navigate(link);
+    
+    
+    
     //debugger;
     //e.calEvent = Selected event
     //e.jsEvent = Browser click event
