@@ -1,9 +1,9 @@
 .pole-miniatury {
     border: 1px solid whitesmoke;
-    background-color: #33cc33;
+    background-color: rgb(217, 255, 0);
     border-radius: 5px;
     padding: 5px;
-    width: 50%;
+    width: 80%;
     height: 80px;;
     position: relative;
 }

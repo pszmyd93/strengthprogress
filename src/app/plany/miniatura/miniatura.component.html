@@ -1,7 +1,7 @@
 <div class="container pole-miniatury">
 
   
-  <div class="tytul"><h2>{{planTreningowy.nazwaPlanu}} {{nr}}</h2></div> <!-- ma pobierać nazwę z ćwiczenia -->
+  <div class="tytul"><h2>{{planTreningowy.nazwaPlanu}}</h2></div> <!-- ma pobierać nazwę z ćwiczenia -->
 
   <div class="dropdown">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Opcje
@@ -9,7 +9,7 @@
     <ul class="dropdown-menu">
       <li><a href="#" [routerLink]="['treningi/trening',planTreningowy.nazwaPlanu,'nowy']">Rozpocznij</a></li>
       <li><a href="#" [routerLink]="['plany/plan-treningowy',planTreningowy.nazwaPlanu,'edit']">Edytuj</a></li>
-      <li><button (click)="usun(planTreningowy.nazwaPlanu)">Usuń</button></li>
+      <li><a href="#"><button (click)="usun(planTreningowy.nazwaPlanu)">Usuń</button></a></li>
     </ul>
   </div>
 

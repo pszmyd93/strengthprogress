@@ -1,6 +1,5 @@
 <div class="container pudlo">
   <app-miniaturatr *ngFor = "let trening of treningi; let i = index" [trening] = "trening" [nr] = "i"></app-miniaturatr>
-  <button class="button guzik1" [routerLink]="['treningi/trening',id,'edit']">Rozpocznij pusty</button>
   <button class="button guzik1" routerLink="treningi/trening">Rozpocznij pusty</button>
   <button class="button" routerLink="panel-plany">Wybierz z listy</button>
 </div>

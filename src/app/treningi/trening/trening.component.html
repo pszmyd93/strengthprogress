@@ -31,24 +31,22 @@
 
   <div class="container-fluid row">
 
-    <div class="col-xs-10 text-center">
+    <div class="col-xs-12 text-center">
       <app-cwiczenie *ngFor="let cwiczenie of trening.cwiczenia; let i = index" [cwiczenie] = "cwiczenie" [nr] = "i" (onUsunCwiczenie)="usunCwiczenie($event)"></app-cwiczenie><!--[] to input od rodzica do dziecka-->
       <app-dodaj-cwiczenie></app-dodaj-cwiczenie>
     </div> 
 
-    <div class="col-xs-2">
-
-    </div>
 
   </div>
   <div class="container-fluid row">
 
     <div class="col-xs-10 text-center">
-    
+      <br>
+        <button id="zapisz-btn" (click)="zapiszTrening()" class="btn-success zapisz-btn">Zapisz trening</button>
     </div>
 
     <div class="col-xs-2 ">
-      <button id="zapisz-btn" (click)="zapiszTrening()" class="btn-success zapisz-btn">Zapisz trening</button>
+      
     </div>
 
   </div>

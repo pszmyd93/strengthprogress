@@ -1,7 +1,7 @@
 .topka {
     background-color: #0c8000;
     width: 100%;
-    position: fixed;
+    
     color: black;
     z-index: 1000;
 }
@@ -14,5 +14,5 @@
     background-color: #0c8000;
 }
 .reszta {
-    margin-top: 10%; 
+    
 }
