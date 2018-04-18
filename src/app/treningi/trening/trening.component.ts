@@ -23,7 +23,12 @@ export class TreningComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
     private router: Router) { }
 
-  ngOnInit() { 
+  ngOnInit() {
+    let spr = JSON.parse(localStorage.getItem("listaTreningow"));
+    if(!spr) {
+      this.treningi.push(this.trening);
+      localStorage.setItem("listaTreningow",JSON.stringify(this.treningi));
+    }
 
     this.activatedRoute.params
       .subscribe(this.onParamsChanged.bind(this));
@@ -76,6 +81,7 @@ export class TreningComponent implements OnInit {
 
 
   zapiszTrening():void {
+    
     let obj = JSON.parse(localStorage.getItem("listaTreningow"));
     let nowyID = obj.length + 1;
     //this.treningi = obj;
@@ -122,7 +128,9 @@ export class TreningComponent implements OnInit {
     else {
       this.trening.id = 0;
       this.treningi.push(this.trening);
+
       localStorage.setItem("listaTreningow",JSON.stringify(this.treningi));
+      
       alert(JSON.stringify(this.trening));
     }
     

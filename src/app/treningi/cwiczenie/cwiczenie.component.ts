@@ -12,16 +12,11 @@ export class CwiczenieComponent implements OnInit {
   @Input() nr: number;
   @Output() onUsunCwiczenie = new EventEmitter();
  
-  
-
   constructor() { }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() { }
 
-  dodajSerie(): void
-  {
+  dodajSerie(): void {
     let s = new Seria(0,20);
     this.cwiczenie.serie.push(s);
   }

@@ -11,30 +11,18 @@ import { ActivatedRoute, Router} from '@angular/router';
   selector: 'app-kalendarz',
   templateUrl: './kalendarz.component.html',
   styleUrls: ['./kalendarz.component.css'
-  
-
-
 ]
 })
 export class KalendarzComponent implements OnInit {
     pusta: Trening[] = [];
 
     listaTreningow: Trening[] = JSON.parse(localStorage.getItem("listaTreningow"));
-
-    
   constructor(
     private route: ActivatedRoute,
     private router: Router ) {
     }
   events: any[];
   handleEventClick(e) {
-    
-    
-    
-    //debugger;
-    //e.calEvent = Selected event
-    //e.jsEvent = Browser click event
-    //e.view = Current view object
 }
   ngOnInit() {
     this.events = [

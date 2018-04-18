@@ -1,6 +1,5 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid-nav row">
-
 		<div class="text-left col-xs-2">
       <button type="button" class="btn btn-default navbar-btn" routerLink="/">Cofnij</button>
     </div>
@@ -16,37 +15,28 @@
     <div class="text-right col-xs-5">
       <a href=""><div class="col-xs-6">{{trening.data}}</div></a>
     </div>
-    
   </div>
 </nav>
-
 <div class="center">
-
   <div class="row czas">
-    
       <div id="czas" class="col-xs-6"><app-timer></app-timer></div>
       <div class="col-xs-6"></div>
-
   </div>
 
   <div class="container-fluid row">
-
     <div class="col-xs-12 text-center">
       <app-cwiczenie *ngFor="let cwiczenie of trening.cwiczenia; let i = index" [cwiczenie] = "cwiczenie" [nr] = "i" (onUsunCwiczenie)="usunCwiczenie($event)"></app-cwiczenie><!--[] to input od rodzica do dziecka-->
       <app-dodaj-cwiczenie></app-dodaj-cwiczenie>
     </div> 
-
-
   </div>
-  <div class="container-fluid row">
 
+  <div class="container-fluid row">
     <div class="col-xs-10 text-center">
       <br>
         <button id="zapisz-btn" (click)="zapiszTrening()" class="btn-success zapisz-btn">Zapisz trening</button>
     </div>
 
     <div class="col-xs-2 ">
-      
     </div>
 
   </div>
