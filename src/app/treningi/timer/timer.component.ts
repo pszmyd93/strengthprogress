@@ -16,7 +16,7 @@ export class TimerComponent {
   }
 
   sessionChange(time:number):void {
-    debugger;
+    
     if(!this.runTimer) {
       if(this.x + time > 0){
         this.x += time;

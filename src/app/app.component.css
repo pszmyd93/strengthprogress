@@ -1,17 +1,30 @@
 .topka {
-    background-color: #0c8000;
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(to bottom, #71da71, #0c8000 70%);
     width: 100%;
-    
     color: black;
     z-index: 1000;
+    padding: 0;
+}
+.guziki {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .guzik-top {
-    border: solid, #333333;
+    margin-left: 0;
+    text-align:center;
     font-size: 16px;
     color: black;
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: #0c8000;
+    background: #009900;
+    background:linear-gradient(to right bottom, #009900, grey);
+}
+.guzik-top:hover {
+    background:linear-gradient(to right bottom, #0c8000, grey);
+    cursor: pointer;
+    color: rgb(20, 20, 129);
 }
 .reszta {
     
